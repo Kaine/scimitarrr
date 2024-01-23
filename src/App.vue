@@ -1,12 +1,11 @@
 <template>
   <main>
-    <!-- <div class="text-sm flex">
+    <div class="text-sm flex">
       <ul class="text-white ml-auto">
         <router-link tag="li" class="bg-gray-700 px-5 py-2 rounded-l hover:bg-gray-900" to="/">Leveling</router-link>
-        <router-link tag="li" class="bg-gray-700 px-5 py-2 rounded-r hover:bg-gray-900" to="items">Items</router-link>
+        <router-link tag="li" class="bg-gray-700 px-5 py-2 rounded-r hover:bg-gray-900" to="stats">Stats</router-link>
       </ul>
-    </div> -->
-    <!-- <div class="columns-1 xl:columns-2"> -->
+    </div>
 
     <RouterView/>
   </main>
