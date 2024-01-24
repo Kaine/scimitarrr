@@ -10,10 +10,10 @@
 </template>
 
 <script setup lang="ts">
+  import ReaversJSON from '../reavers.json'
   import { defineComponent } from 'vue'
   import StatsPanel from './StatsPanel.vue'
   import StatsDetails from './StatsDetails.vue'
-  import ReaversJSON from '../reavers.json'
 </script>
 
 <script lang="ts">
