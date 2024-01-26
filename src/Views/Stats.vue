@@ -1,5 +1,5 @@
 <template>
-  <h1 class="text-white text-lg mb-3">Reavers Stats / <span class="font-semibold">23.01.2024 - 25.01.2024</span></h1>
+  <h1 class="text-white text-lg mb-3">Jan 23 / {{ ReaversNewJSON.date }}</h1>
   <div>
     <StatsPanel :avatar="9949" :reavers="ReaversNewJSON.oneone" :name="'1/1'"/>
     <StatsPanel :avatar="13" :reavers="ReaversNewJSON.fm" :name="'First Mate'"/>
