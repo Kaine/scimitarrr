@@ -1,6 +1,11 @@
 <template>
   <h1 class="text-white text-lg mb-3">Reavers Stats</h1>
-  <div class="font-bold text-gray-700 bg-white bg-opacity rounded p-2 mb-6 border-b first:rounded first:mt-0">
+  <h1 class="text-white text-lg mb-3">
+      <a target="_blank" href="https://t.me/solana_unibot?start=r-cyberwolf_ru-G8GWGhhfZmAFW8VtvB3mtULwiWC4noTaHp82si3QvcPv">LESGOH</a>
+
+
+  </h1>
+  <div class="font-bold text-gray-700 bg-white bg-opacity rounded p-3 mb-6 border-b first:rounded first:mt-0">
     <div class="flex justify-evenly items-center text-center rounded font-normal">
       <div class="flex flex-col w-1/2">
         <span class="font-light text-xs text-gray-600">Prev. Update</span>

@@ -3,7 +3,7 @@
     <div v-for="level in LEVELS" :class="[ level == 15 ? 'text-gray-700' : '', 'text-center rounded m-1 px-3 py-2']">
       <span class="font-light text-xs">L{{ level }} / {{ percentOfLevel(level) }}%</span>
       <p class="text-2xl md:text-3xl">{{ countForLevel(level).toLocaleString() }}
-        <sup v-if="incrementForLevel(level) != 0" :class="incrementClass(incrementForLevel(level))">{{ incrementForLevel(level) > 0 ? '+' : null }}{{ incrementForLevel(level) }}</sup>
+        <sup v-if="(level == 15) || (level == 20) && incrementForLevel(level) != 0" :class="incrementClass(incrementForLevel(level))">{{ incrementForLevel(level) > 0 ? '+' : null }}{{ incrementForLevel(level) }}</sup>
       </p>
     </div>
   </div>
@@ -31,7 +31,7 @@
         return this.countForLevel(level) - this.countForLevelOld(level)
       },
       incrementClass(increment:number) {
-        return increment > 0 ? 'text-sm text-green-600' : 'text-sm text-red-600'
+        return increment > 0 ? 'text-xs text-green-700 bg-green-500 bg-opacity-20 px-1.5 py-1 rounded' : 'text-sm text-red-600'
       },
 		},
     computed: {
