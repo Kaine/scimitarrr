@@ -19,7 +19,7 @@
       <div class="flex flex-col w-1/5 hidden md:block">
         <span class="font-light text-xs text-gray-600">lvl 15</span>
         <p class="text-2xl md:text-3xl">{{ level_XV.toLocaleString() }}</p>
-        <p class="text-sm font-light text-gray-500">{{ level_VIII_percent }}%</p>
+        <p class="text-sm font-light text-gray-500">{{ level_XV_percent }}%</p>
       </div>
 
       <div class="flex flex-col w-1/5  hidden md:block">
