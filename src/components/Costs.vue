@@ -1,5 +1,5 @@
 <template>
-  <div class="font-semibold text-gray-800 text-center flex justify-evenly bg-white bg-opacity-80 py-4 space-x-5 rounded-t rounded-bl">
+  <div class="font-semibold text-gray-800 text-center flex justify-evenly bg-white py-4 space-x-5 rounded-t rounded-bl">
     <div>
       <span class="font-light text-xs">NFTs</span>
       <p class="text-2xl md:text-3xl">{{ reaversCollection.reavers.length }}</p>
