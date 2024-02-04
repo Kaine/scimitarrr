@@ -13,7 +13,9 @@
 
   <div class="mb-10">
     <div class="flex flex-row items-center">
-      <div class="basis-1/2"></div>
+      <div class="basis-1/2">
+        <!-- <button @click="reaversCollection.add()" type="button" class="px-6 py-2 bg-sky-700 text-white rounded-b hover:bg-sky-800 focus:outline-none">Add</button> -->
+      </div>
       <div class="basis-1/2">
         <div class="bg-white px-8 py-2 rounded-b">
           <div class="flex justify-evenly">
@@ -30,17 +32,19 @@
       </div>
     </div>
 
-    <div class="flex p-3 mt-5 gap-x-2 bg-white text-white text-sm rounded">
-      <button @click="reaversCollection.add()" type="button" class="px-6 py-2 bg-sky-700 rounded hover:bg-sky-800 focus:outline-none">Add Reaver</button>
+    <div class="flex p-2 mt-5 gap-x-2 bg-white text-white text-sm rounded">
+      <button @click="reaversCollection.setLevelFromTo(8, 15)" type="button" class="px-5 py-2 bg-gray-700 rounded hover:bg-gray-800 focus:outline-none">8 → 15</button>
+      <button @click="reaversCollection.setLevelFromTo(15, 20)" type="button" class="px-5 py-2 bg-gray-700 rounded hover:bg-gray-800 focus:outline-none">15 → 20</button>
       <div class="flex-grow"></div>
-      <button @click="reaversCollection.setLevelToForAll(15)" type="button" class="px-5 py-2 bg-gray-700 rounded hover:bg-gray-800 focus:outline-none">All 15</button>
-      <button @click="reaversCollection.setLevelToForAll(20)" type="button" class="px-5 py-2 bg-gray-700 rounded hover:bg-gray-800 focus:outline-none">All 20</button>
+      <button @click="reaversCollection.setLevelToForAll(15)" type="button" class="px-5 py-2 bg-gray-700 rounded hover:bg-gray-800 focus:outline-none">→ 15</button>
+      <button @click="reaversCollection.setLevelToForAll(20)" type="button" class="px-5 py-2 bg-gray-700 rounded hover:bg-gray-800 focus:outline-none">→ 20</button>
     </div>
 
-    <div v-if="Number(reaversCollection.reavers.length) > 0" class="bg-gray-900 bg-opacity-50 p-2 text-gray-100 text-xs rounded mt-1">Click on avatar to remove reaver</div>
+    <div v-if="Number(reaversCollection.reavers.length) > 0" class="bg-red-700 p-2 text-gray-100 text-xs rounded mt-1">Click on avatar to remove reaver!</div>
+    <button @click="reaversCollection.add()" type="button" class="mt-2 px-6 py-2 bg-sky-700 text-white rounded hover:bg-sky-800 focus:outline-none">Add Reaver</button>
   </div>
 
-  <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 mb-10">
+  <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 mb-10">
     <div v-for="reaver in reaversCollection.reavers" v-bind:key="reaver.id">
       <ReaversForm :reaver="reaver" :key="reaversCollection.levelType" />
     </div>

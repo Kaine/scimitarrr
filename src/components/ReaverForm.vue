@@ -18,14 +18,10 @@
           </select>
         </div>
       </div>
-
       <div class="p-1 bg-black bg-opacity-5 rounded mt-3">
         <small class="text-center block text-xs">booty</small>
         <div class="text-center text-md">{{ lvlupBootyCost.toLocaleString() }}</div>
       </div>
-      <!-- <div class="flex flex-none w-10 justify-end items-center">
-        <button @click="remove()" type="button" class="w-8 h-8 text-gray-400 text-sm text-center bg-black bg-opacity-5 rounded hover:text-white hover:bg-red-700 focus:outline-none">X</button>
-      </div> -->
     </div>
   </div>
 </template>

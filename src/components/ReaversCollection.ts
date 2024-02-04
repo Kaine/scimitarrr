@@ -76,5 +76,12 @@ export const reaversCollection = reactive({
       reaver.levelTo = level
       reaver.totalBootyCost = this.calcBootyCost(reaver.levelFrom, level)
     })
+  },
+  setLevelFromTo(levelFrom: number, levelTo: number) {
+    this.reavers.forEach(reaver => {
+      reaver.levelFrom = levelFrom
+      reaver.levelTo = levelTo
+      reaver.totalBootyCost = this.calcBootyCost(levelFrom, levelTo)
+    })
   }
 })
