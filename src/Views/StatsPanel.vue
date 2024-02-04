@@ -9,23 +9,22 @@
           <p class="font-semibold text-2xl md:text-3xl">{{ reaversCount.toLocaleString() }}</p>
         </div>
       </div>
-
       <div class="flex flex-col w-1/4">
         <span class="font-light text-xs text-gray-600">island 2</span>
         <p class="text-2xl md:text-3xl">{{ islandTwoPercentage }}<sup class="ml-1 text-sm text-gray-500">%</sup></p>
         <p class="text-sm font-light text-gray-500">{{ islandTwoCount.toLocaleString() }}</p>
       </div>
-
-      <div class="flex flex-col w-1/5 hidden md:block">
-        <span class="font-light text-xs text-gray-600">lvl 15</span>
-        <p class="text-2xl md:text-3xl">{{ level_XV.toLocaleString() }}</p>
-        <p class="text-sm font-light text-gray-500">{{ level_XV_percent }}%</p>
-      </div>
-
-      <div class="flex flex-col w-1/5  hidden md:block">
-        <span class="font-light text-xs text-gray-600">lvl 20</span>
-        <p class="text-2xl md:text-3xl">{{ level_XX.toLocaleString() }}</p>
-        <p class="text-sm font-light text-gray-500">{{ level_XX_percent }}%</p>
+      <div class="flex flex-col w-1/4">
+        <div v-if="islandThreeCount == 0">
+          <span class="font-light text-xs text-gray-600">island 3</span>
+          <p class="text-2xl md:text-3xl">-</p>
+          <p class="text-sm font-light text-gray-500">&nbsp;</p>
+        </div>
+        <div v-else>
+          <span class="font-light text-xs text-gray-600">island 3</span>
+          <p class="text-2xl md:text-3xl">{{ islandThreePercentage }}<sup class="ml-1 text-sm text-gray-500">%</sup></p>
+          <p class="text-sm font-light text-gray-500">{{ islandThreeCount.toLocaleString() }}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -42,8 +41,17 @@
       reaversCount() {
         return this.reavers.count
       },
+      islandTwoCount() {
+        return this.reavers.island_2
+      },
       islandTwoPercentage() {
         return ((100 / this.reaversCount) * this.reavers.island_2).toFixed(1)
+      },
+      islandThreeCount() {
+        return this.reavers.island_3
+      },
+      islandThreePercentage() {
+        return ((100 / this.reaversCount) * this.reavers.island_3).toFixed(1)
       },
       level_VIII() {
         return this.reavers.level_8
@@ -62,9 +70,6 @@
       },
       level_XX_percent() {
         return ((this.level_XX / this.reaversCount) * 100.0).toFixed(2)
-      },
-      islandTwoCount() {
-        return this.reavers.island_2
       }
     }
   })
