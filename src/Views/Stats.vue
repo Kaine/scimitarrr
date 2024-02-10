@@ -1,5 +1,5 @@
 <template>
-  <h1 class="text-white text-lg mb-3">Reavers Stats</h1>
+  <h1 class="text-white text-lg">Stats</h1>
   <div class="font-bold text-gray-700 bg-white bg-opacity rounded p-3 mb-6 border-b first:rounded first:mt-0">
     <div class="flex justify-evenly items-center text-center rounded font-normal">
       <div class="flex flex-col w-1/2">

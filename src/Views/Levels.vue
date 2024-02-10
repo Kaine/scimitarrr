@@ -1,5 +1,5 @@
 <template>
-  <h1 class="text-white text-lg mb-3">Leveling</h1>
+  <h1 class="text-white text-lg">Leveling</h1>
   <Suspense>
     <Costs :key="reaversCollection.total"/>
     <template #fallback>
