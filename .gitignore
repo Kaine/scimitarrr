@@ -28,3 +28,6 @@ coverage
 
 *.tsbuildinfo
 deploy.sh
+
+update.ts
+reavers.json
