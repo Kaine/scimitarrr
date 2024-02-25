@@ -1,17 +1,18 @@
 <template>
   <div class="font-medium text-gray-600 bg-white bg-opacity-95 rounded-b p-4 grid grid-cols-2 md:grid-cols-4 last:mb-20">
-    <div v-for="level in LEVELS" :class="[ level == 15 ? 'text-gray-700' : '', 'text-center rounded m-1 px-3 py-2']">
-      <span class="font-light text-xs">L{{ level }} / {{ percentOfLevel(level) }}%</span>
+    <div v-for="level in KEY_LEVELS" :class="[ level == 15 ? 'text-gray-700' : '', 'text-center rounded m-1 px-3 py-2']">
+      <span class="font-light text-xs">Level {{ level }}</span>
       <p class="text-2xl md:text-3xl">{{ countForLevel(level).toLocaleString() }}
-        <sup v-if="(level == 15) || (level == 20) && incrementForLevel(level) != 0" :class="incrementClass(incrementForLevel(level))">{{ incrementForLevel(level) > 0 ? '+' : null }}{{ incrementForLevel(level) }}</sup>
+        <sup class="text-xs bg-opacity-20 px-1.5 py-1 rounded" v-if="(level == 15) || (level == 20) && incrementForLevel(level) != 0" :class="incrementClass(incrementForLevel(level))">{{ incrementForLevel(level) > 0 ? '+' : null }}{{ incrementForLevel(level) }}</sup>
       </p>
+      <span class="font-medium text-sm">{{ percentOfLevel(level) }}%</span>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 	import { defineComponent } from 'vue'
-	import { LEVELS } from '@/components/Constants'
+	import { KEY_LEVELS } from '@/components/Constants'
 </script>
 
 <script lang="ts">
@@ -31,7 +32,7 @@
         return this.countForLevel(level) - this.countForLevelOld(level)
       },
       incrementClass(increment:number) {
-        return increment > 0 ? 'text-xs text-green-700 bg-green-500 bg-opacity-20 px-1.5 py-1 rounded' : 'text-sm text-red-600'
+        return increment > 0 ? 'text-green-700 bg-green-500' : 'text-red-600 bg-red-500'
       },
 		},
     computed: {
