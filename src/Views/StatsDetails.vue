@@ -3,7 +3,7 @@
     <div v-for="level in KEY_LEVELS" :class="[ level == 15 ? 'text-gray-700' : '', 'text-center rounded m-1 px-3 py-2']">
       <span class="font-light text-xs">Level {{ level }}</span>
       <p class="text-2xl md:text-3xl">{{ countForLevel(level).toLocaleString() }}
-        <sup class="text-xs bg-opacity-20 px-1.5 py-1 rounded" v-if="(level == 15) || (level == 20) && incrementForLevel(level) != 0" :class="incrementClass(incrementForLevel(level))">{{ incrementForLevel(level) > 0 ? '+' : null }}{{ incrementForLevel(level) }}</sup>
+        <!-- <sup class="text-xs bg-opacity-20 px-1.5 py-1 rounded" v-if="(level == 15) || (level == 20) && incrementForLevel(level) != 0" :class="incrementClass(incrementForLevel(level))">{{ incrementForLevel(level) > 0 ? '+' : null }}{{ incrementForLevel(level) }}</sup> -->
       </p>
       <span class="font-medium text-sm">{{ percentOfLevel(level) }}%</span>
     </div>

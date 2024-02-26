@@ -6,7 +6,7 @@
         <img :src="`reavers/${avatar}.png`" class="rounded-md max-h-20">
         <div class="flex flex-col text-left">
           <p class="font-light text-lg">{{ name }}</p>
-          <p class="font-semibold text-2xl md:text-3xl">{{ reaversCount.toLocaleString() }}</p>
+          <p class="font-semibold text-xl md:text-2xl">{{ reaversCount.toLocaleString() }}</p>
         </div>
       </div>
       <div class="flex flex-col w-1/4">

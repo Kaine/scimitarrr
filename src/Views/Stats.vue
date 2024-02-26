@@ -1,16 +1,9 @@
 <template>
   <h1 class="text-white text-lg">Stats</h1>
-  <div class="font-bold text-gray-700 bg-white bg-opacity rounded p-3 mb-6 border-b first:rounded first:mt-0">
-    <div class="flex justify-evenly items-center text-center rounded font-normal">
-      <div class="flex flex-col w-1/2">
-        <span class="font-light text-xs text-gray-600">Prev. Update</span>
-        <p class="text-xl md:text-2xl">{{ new Date(ReaversJSON.date).toLocaleDateString() }}</p>
-      </div>
-      <div class="h-[50px] min-h-[1em] w-px self-stretch bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-20 dark:opacity-100"></div>
-      <div class="flex flex-col w-1/2">
-        <span class="font-light text-xs text-gray-600">Last Update</span>
-        <p class="text-xl md:text-2xl">{{ timeAgo(ReaversNewJSON.date) }}</p>
-      </div>
+  <div class="flex">
+    <div class="flex-none font-bold bg-white rounded px-4 py-2 mb-6 first:rounded first:mt-0">
+      <span class="font-light text-sm text-gray-600 mr-1">Last update</span>
+      <span class="font-medium text-gray-900">{{ timeAgo(ReaversNewJSON.date) }}</span>
     </div>
   </div>
 
